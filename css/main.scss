@@ -380,8 +380,8 @@ h3 {
       padding: 10px;
       left: 0;
       top: 70px;
+      bottom: 0;
       overflow-y: auto;
-      max-height: calc(100vh - 100px);
       transition: .3s;
       transform: translateX(-400px);
       &>ul {
