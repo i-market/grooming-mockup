@@ -1,6 +1,7 @@
 $red: #95113c;
 $body: #eebea3;
 $border: #c5c5c5;
+$lightGray: #ecf0f1;
 $italic: 'ClearSans-Italic',
 'Arial',
 sans-serif;
@@ -1089,6 +1090,7 @@ h3 {
   .grid {
     width: 100%;
     display: inline-block;
+    background-color: $lightGray;
   }
   .item {
     position: relative;
