@@ -1497,6 +1497,7 @@ h3 {
   .grid {
     margin: 0 -10px;
     font-size: 0;
+    text-align: center;
   }
   .col {
     display: inline-block;
@@ -1531,7 +1532,8 @@ h3 {
       line-height: 1.2;
       margin-bottom: 20px;
     }
-    .text {
+    .text,
+    .text p {
       font-size: 18px;
       line-height: 1.2;
     }
