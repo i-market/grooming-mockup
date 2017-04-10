@@ -26,7 +26,9 @@ $(document).ready(function () {
   });
 
   // табы
+  var tableItemsNumber = 12;
   $(function () {
+    
     $('[data-tabLinks]').on('click', function () {
       var targetNode = $('[data-tabContent=' + $(this).attr('data-tabLinks') + ']');
       $(this).parent().find('[data-tabLinks]').removeClass('active').filter(this).addClass('active');
@@ -43,6 +45,33 @@ $(document).ready(function () {
       scrollTop: $("[data-anchor=" + anchor + "]").offset().top
     }, 700);
     t.preventDefault();
+  });
+
+  // инфа по номерам
+  $('.hotel_bottom_open_hidden').on("click", function () {
+    var text = $(this).text()
+    $(this).toggleClass('active');
+    $(this).parents('.hotel_item').find('.hotel_hidden').slideToggle(100);
+    text == 'Подробнее' ? $(this).text('Свернуть') : $(this).text('Подробнее');
+  });
+
+  // открыть элементы таблицы
+  
+  //$(".show_items tr:not(:lt(" + tableItemsNumber + "))").hide();
+  $('[data-tabcontent]').each(function(idx, itm){
+    $(".show_items tr:not(:lt(" + tableItemsNumber + "))", itm).hide();
+  })
+  $(".more_table_items").click(function (e) {
+    var context = $(this).parents('[data-tabcontent]');
+
+    e.preventDefault();
+    if ($(".show_items tr:eq(" + tableItemsNumber + ")", context).is(":hidden")) {
+      $(".show_items tr:hidden", context).show();
+      $(this).addClass('active');
+    } else {
+      $(".show_items tr:not(:lt(" + tableItemsNumber + "), context)", context).hide();
+      $(this).removeClass('active');
+    }
   });
 
   // гамбургер
