@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Краткое описание сайта для поисковика">
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <title>Название страницы - заголовок</title>
+  <link rel="stylesheet" media="screen" href="css/lib/normalize.min.css">
+  <link rel="stylesheet" media="screen" href="css/lib/jquery.fancybox.css">
+  <link rel="stylesheet" media="screen" href="css/lib/slick.css">
+  <link rel="stylesheet" media="screen" href="css/main.css">
+  <!--[if gte IE 9]>
+<style type="text/css">
+.gradient {
+filter: none;
+}
+</style>
+<![endif]-->
+</head>
+
+<body>
+  <header class="header">
+    <div class="wrap">
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <a class="logo" href=../></a>
+      <nav class="main_menu cf">
+        <ul>
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Груминг</a>
+            <ul>
+              <li>
+                <strong>Услуги для собак</strong>
+                <p><a href="#">Стоимость</a></p>
+                <p><a href="#">Фотогалерея работ</a></p>
+                <p><a href="#">Комплексные услуги </a></p>
+                <p><a href="#">Дополнительные возможности</a></p>
+                <p><a href="#">Услуги без записи</a></p>
+                <p><a href="#">Pet expression</a></p>
+                <p><a href="#">Share your pets style</a></p>
+              </li>
+              <li>
+                <strong>Услуги для кошек</strong>
+                <p><a href="#">Стоимость</a></p>
+                <p><a href="#">Фотогалерея работ</a></p>
+                <p><a href="#">Комплексные услуги </a></p>
+                <p><a href="#">Дополнительные возможности</a></p>
+                <p><a href="#">Услуги без записи</a></p>
+              </li>
+              <li>
+                <strong>Дополнительные услуги</strong>
+                <p><a href="#">Фотогалерея работ</a></p>
+                <p><a href="#">Комплексные услуги </a></p>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#">Гостиница</a></li>
+          <li><a href="#">Магазин</a></li>
+          <li><a href="#">Зоотакси</a></li>
+          <li><a href="#">Галерея</a></li>
+          <li><a href="#" class="active">Акции</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header_info">
+        <form action="" method="post" id="" class="search_form">
+          <input type="text" placeholder="Поиск">
+          <button type="submit"></button>
+        </form>
+        <a class="tel" href="tet:+7 (495) 664 -38-23">+7 (495) 664 -38-23</a>
+        <span class="re_call btn" data-modal="re_call">Обратный звонок</span>
+        <span class="open_form"></span>
+        <a class="tel_mobile" href="tet:+7 (495) 664 -38-23">
+          <i class="fa fa-phone"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- CONTENT START -->
+  <main class="content">
+    <section class="contacts_section">
+      <div class="left">
+        <div class="block">
+          <div class="bread_crumbs">
+            <div class="wrap">
+              <ul>
+                <li><a href="#">Главная </a></li>
+                <span class="separator">/</span>
+                <li><a href="#" class="active">Зоомагазин</a></li>
+              </ul>
+            </div>
+          </div>
+          <h1>Контакты</h1>
+          <div class="contacts_line"><span></span></div>
+          <div class="info_line">
+            <i class="fa fa-paper-plane"></i>
+            <p>Московская область, г. Жуковский, ул. Королева, д. 4, стр. 1</p>
+          </div>
+          <div class="info_line">
+            <i class="fa fa-envelope"></i>
+            <p>Info@groomelier.ru</p>
+          </div>
+          <div class="info_line">
+            <i class="fa fa-phone"></i>
+            <p>+7 (499) 277 17 33</p>
+          </div>
+          <div class="info_line">
+            <i class="fa fa-globe"></i>
+            <p>www.groomelier.ru</p>
+          </div>
+          <div class="info_line">
+            <i class="fa fa-clock-o"></i>
+            <p>Ежедневно: с 10.00 до 21.00 </p>
+          </div>
+          <p class="text">Проложите до нас маршрут:</p>
+          <span class="yandex"></span>
+        </div>
+      </div>
+      <div class="right">
+        <div id="map"></div>
+      </div>
+    </section>
+    <section class="contacts_gallery">
+      <div class="wrap">
+        <div class="grid">
+          <a class="gellery_item col col_3" href="images/pic_17.jpg" rel="group">
+            <img src="images/pic_17.jpg" alt="">
+          </a>
+          <a class="gellery_item col col_3" href="images/pic_17.jpg" rel="group">
+            <img src="images/pic_17.jpg" alt="">
+          </a>
+          <a class="gellery_item col col_3" href="images/pic_17.jpg" rel="group">
+            <img src="images/pic_17.jpg" alt="">
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- FOOTER START -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="top">
+        <div class="logo">
+          <a href="#">
+            <img src="images/logo.png" alt="">
+          </a>
+        </div>
+        <div class="about_us">
+          <strong>о нас</strong>
+          <p>Наша компания предлагает Клиентам широкий спектр услуг для домашних питомцев: груминг, гостиница, зоомагазин и зоотакси. Профессионализм сотрудников и качество предоставляемых услуг не оставит Ваших питомцев равнодушными.</p>
+        </div>
+        <div class="menu">
+          <strong>меню</strong>
+          <div class="left">
+            <p><a href="#">О нас</a></p>
+            <p><a href="#">Груминг</a></p>
+            <p><a href="#">Гостиница</a></p>
+            <p><a href="#">Зоотакси</a></p>
+            <p><a href="#">Магазин</a></p>
+            <p><a href="#">Галерея</a></p>
+          </div>
+          <div class="right">
+            <p><a href="#">Акции</a></p>
+            <p><a href="#">Обратная связь</a></p>
+            <p><a href="#">Контакты</a></p>
+          </div>
+        </div>
+        <div class="contacts">
+          <strong>контакты</strong>
+          <div class="line">
+            <i class="fa fa-paper-plane"></i>
+            <span class="text">Московская область, г. Жуковский, 
+ул. Королева, д. 4, стр. 1</span>
+          </div>
+          <div class="line">
+            <i class="fa fa-envelope"></i>
+            <a class="text" href="mailto:Hello@groomilier.ru">Hello@groomilier.ru</a>
+          </div>
+          <div class="line">
+            <i class="fa fa-phone"></i>
+            <a class="text" href="tel:+74951234567">+7 (495) 123 45 67</a>
+          </div>
+          <div class="line">
+            <i class="fa fa-globe"></i>
+            <a class="text" href="www.grumilier.ru">www.grumilier.ru</a>
+          </div>
+          <div class="line">
+            <i class="fa fa-clock-o"></i>
+            <span class="text">Ежедневно с 10.00 до 21.00</span>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">Copyright 2016 © Grumilier.ru - Груминг, гостиница, магазин для животных. Создание и продвижение сайта: i-Market</div>
+    </div>
+  </footer>
+  <!--Модалки-->
+  <!--Обратный звонок-->
+  <div class="modal" id="re_call">
+    <form class="block" method="post" action="" name="" id="">
+      <span class="close"></span>
+      <strong>Заказать звонок</strong>
+      <input type="text" placeholder="ФИО">
+      <input type="text" placeholder="Телефон">
+      <textarea placeholder="Сообщение"></textarea>
+      <div class="bottom">
+        <button>Отправить</button>
+      </div>
+    </form>
+  </div>
+  <!-- ПОДКЛЮЧЕНИЕ СКРИПТОВ START -->
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://use.fontawesome.com/d5e5cdfb8c.js"></script>
+  <script type="text/javascript" src="js/vendor/slick.min.js"></script>
+  <script type="text/javascript" src="js/vendor/wow.min.js"></script>
+  <script type="text/javascript" src="js/vendor/jquery.fancybox.pack.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    // карта
+    ymaps.ready(function() {
+      var myMap = new ymaps.Map('map', {
+          center: [55.58788006914073, 38.19279949999993],
+          zoom: 18
+        }, {
+          searchControlProvider: 'yandex#search'
+        }),
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+          hintContent: 'Грумилье',
+          balloonContent: '<div>Московская область, г. Жуковский,<br>ул. Королева, д. 4, стр. 1</div>'
+        }, {
+          iconLayout: 'default#image',
+          iconImageHref: '../images/marker.png',
+          iconImageSize: [244, 112],
+          iconImageOffset: [-40, -100]
+        });
+
+      myMap.geoObjects.add(myPlacemark);
+    });
+
+  </script>
+</body>
+
+</html>
