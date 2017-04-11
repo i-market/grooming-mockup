@@ -1578,9 +1578,11 @@ h3 {
   @media only screen and (max-width: 1023px) {
     padding: 0 40px;
   }
-  p {
+  &, p {
     font-size: 18px;
     line-height: 1.2;
+  }
+  p {
     margin-top: 20px;
   }
 }
