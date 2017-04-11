@@ -1793,8 +1793,10 @@ h3 {
     .text {
       height: 115px;
       position: relative;
-      font-size: 24px;
-      line-height: 1.2;
+      &, p {
+        font-size: 24px;
+        line-height: 1.2;
+      }
       &:before {
         display: block;
         position: absolute;
