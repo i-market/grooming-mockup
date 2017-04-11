@@ -77,7 +77,7 @@ textarea {
 }
 
 .editable-area {
-  p {
+  p:not(:last-child) {
     margin-bottom: 20px;
   }
 }
