@@ -80,6 +80,9 @@ textarea {
   p:not(:last-child) {
     margin-bottom: 20px;
   }
+  strong, b {
+    font-weight: 700;
+  }
 }
 
 .btn {
@@ -2246,16 +2249,20 @@ h3 {
 .shares--page {
   padding-bottom: 110px;
   .inner_text {
-    font-size: 24px;
-    line-height: 36px;
-    text-align: center;
-    max-width: 1000px;
     margin: 0 auto 100px;
+    max-width: 1000px;
     @media only screen and (max-width: 767px) {
-      font-size: 18px;
-      line-height: 1.2;
       margin-bottom: 50px;
       padding: 0 20px;
+    }
+    &, p {
+      font-size: 24px;
+      line-height: 36px;
+      text-align: center;
+      @media only screen and (max-width: 767px) {
+        font-size: 18px;
+        line-height: 1.2;
+      }
     }
   }
   .inner_text_mb {
@@ -3030,6 +3037,16 @@ h3 {
     justify-content: space-between;
     align-items: flex-start;
     padding-top: 65px;
+    &, p {
+      font-size: 18px;
+      line-height: 1.2;
+    }
+    p {
+      margin-bottom: 25px;
+    }
+    strong {
+      font-weight: 700;
+    }
     &>div {
       width: 50%;
       @media only screen and (max-width: 767px) {
@@ -3042,13 +3059,6 @@ h3 {
     }
     img {
       width: 100%;
-    }
-    strong {
-      display: block;
-      font-size: 18px;
-      line-height: 1.2;
-      margin-bottom: 25px;
-      font-weight: 700;
     }
   }
   .hotel_list {
@@ -3069,6 +3079,9 @@ h3 {
         background: #e60e4f;
       }
     }
+  }
+  ul {
+    @extend .hotel_list;
   }
   .grid {
     margin: 0 -10px;
