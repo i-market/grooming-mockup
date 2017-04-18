@@ -219,6 +219,15 @@ h3 {
   @media only screen and (max-width: 767px) {
     padding-top: 100px;
   }
+  &.error {
+    $whitespace: 15vh;
+    text-align: center;
+    padding-top: calc(140px + #{$whitespace});
+    @media only screen and (max-width: 767px) {
+      padding-top: calc(100px + #{$whitespace});
+    }
+    padding-bottom: $whitespace;
+  }
 }
 
 .header {
