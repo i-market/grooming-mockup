@@ -886,14 +886,16 @@ h3 {
       }
       .text {
         display: block;
-        font-family: $italic;
         padding: 20px;
-        line-height: 1.2;
-        @media only screen and (max-width: 1600px) {
-          font-size: 16px;
-        }
         @media only screen and (max-width: 767px) {
           display: none;
+        }
+        &, p {
+          line-height: 1.2;
+          font-family: $italic;
+          @media only screen and (max-width: 1600px) {
+            font-size: 16px;
+          }
         }
       }
     }
