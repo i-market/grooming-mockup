@@ -84,7 +84,9 @@ $(document).ready(function () {
   });
   // поиск
   $('.open_form').on('click', function () {
-    $('.search_form').fadeToggle();
+    $('.search_form').fadeToggle(function() {
+      $('.search_form input').focus();
+    });
   });
   // галерея
   $(".gellery_item").fancybox({
