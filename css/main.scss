@@ -392,6 +392,7 @@ h3 {
             top: -50px;
             left: 0px;
             background: none;
+            z-index: -1;
           }
           @media only screen and (max-width:1024px) {
             display: none !important;
