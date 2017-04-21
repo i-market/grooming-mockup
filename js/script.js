@@ -64,7 +64,11 @@ $(document).ready(function () {
   //$(".show_items tr:not(:lt(" + tableItemsNumber + "))").hide();
   $('[data-tabcontent]').each(function(idx, itm){
     $(".show_items tr:not(:lt(" + tableItemsNumber + "))", itm).hide();
-  })
+    var $rows = $(".show_items tr", itm);
+    if ($rows.length > tableItemsNumber) {
+      $(".more_table_items").show();
+    }
+  });
   $(".more_table_items").click(function (e) {
     var context = $(this).parents('[data-tabcontent]');
 
