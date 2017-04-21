@@ -53,7 +53,7 @@ $(document).ready(function () {
 
   // инфа по номерам
   $('.hotel_bottom_open_hidden').on("click", function () {
-    var text = $(this).text()
+    var text = $(this).text();
     $(this).toggleClass('active');
     $(this).parents('.hotel_item').find('.hotel_hidden').slideToggle(100);
     text == 'Подробнее' ? $(this).text('Свернуть') : $(this).text('Подробнее');
@@ -96,7 +96,7 @@ $(document).ready(function () {
   // прокрутка
   wow = new WOW({
     mobile: false
-  })
+  });
   wow.init();
   // слайдер
   $('.gallery_big').slick({
@@ -261,16 +261,16 @@ $(document).ready(function () {
       $('.slider_why_us').slick('init');
     } else {
       $('.slider_why_us').slick('unslick');
-    };
+    }
     if ($(window).width() <= 1024) {
       $('.slider_shares, .slider_gallery, .gallery_slider_1, .gallery_slider_2, .gallery_slider_3, .gallery_slider_4').slick('init');
     } else {
       $('.slider_shares, .slider_gallery, .gallery_slider_1, .gallery_slider_2, .gallery_slider_3, .gallery_slider_4').slick('unslick');
-    };
+    }
 
     wow = new WOW({
       mobile: false
-    })
+    });
     wow.init();
   };
   $(window).on('load resize', function () {
