@@ -45,8 +45,13 @@ $(document).ready(function () {
   // якоря
   $("[data-href]").on("click", function (t) {
     var anchor = $(this).data('href');
+    var headerHeight = $('header').filter(function() {
+      return $(this).css('position') === 'fixed';
+    }).outerHeight(true);
+    var breadcrumbsHeight = $('.bread_crumbs').outerHeight(true);
+    var offset = (headerHeight === null ? 0 : headerHeight) + (breadcrumbsHeight === null ? 0 : breadcrumbsHeight);
     $("html, body").stop().animate({
-      scrollTop: $("[data-anchor=" + anchor + "]").offset().top
+      scrollTop: $("[data-anchor=" + anchor + "]").offset().top - offset
     }, 700);
     t.preventDefault();
   });
