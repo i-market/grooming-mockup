@@ -2386,7 +2386,15 @@ h3 {
     @media only screen and (max-width: 767px) {
       margin-bottom: 0;
     }
-   }
+  }
+  .tab_links {
+    span {
+      @media only screen and (max-width:425px) {
+        font-size: 18px;
+        padding: 15px;
+      }
+    }
+  }
 }
 
 .item_shares {
