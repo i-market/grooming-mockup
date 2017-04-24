@@ -1222,14 +1222,14 @@ h3 {
 }
 
 .gallery_big {
-  background-color: $light-gray;
+  //background-color: $light-gray;
 }
 
 .gallery {
   .grid {
     width: 100%;
     display: inline-block;
-    background-color: $light-gray;
+    background-color: rgba(#000, 0.8);
   }
   .item {
     position: relative;
