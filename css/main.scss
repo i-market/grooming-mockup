@@ -2759,6 +2759,14 @@ h3 {
     }
     tr {
       background: #FFF;
+      &.indent-1 {
+        td:first-child {
+          padding-left: 80px;
+          @media only screen and (max-width: 767px) {
+            padding-left: 40px;
+          }
+        }
+      }
       &:nth-child(even) {
         background: #ecf0f1;
       }
