@@ -2839,6 +2839,12 @@ h3 {
 .contacts_section {
   display: flex;
   flex-wrap: wrap;
+  .hidden-desktop {
+    // TODO false positives are definitely possible
+    @media only screen and (min-width: 1024px) {
+      display: none;
+    }
+  }
   .bread_crumbs {
     margin: 0 0 55px;
   }
