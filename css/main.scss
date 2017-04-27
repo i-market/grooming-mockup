@@ -1282,6 +1282,13 @@ h3 {
   }
 }
 
+.simple-text-section {
+  margin-bottom: 55px;
+  .wrap {
+    max-width: 1140px;
+  }
+}
+
 .banners {
   margin-bottom: 55px;
   @media only screen and (max-width: 767px) {
@@ -1718,7 +1725,7 @@ h3 {
     line-height: 1.2;
   }
   p {
-    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
 
