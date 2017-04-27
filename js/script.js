@@ -74,6 +74,7 @@ $(document).ready(function () {
       $(".more_table_items").show();
     }
   });
+  var buttonText = $(".more_table_items").first().text();
   $(".more_table_items").click(function (e) {
     var context = $(this).parents('[data-tabcontent]');
 
@@ -81,9 +82,11 @@ $(document).ready(function () {
     if ($(".show_items tr:eq(" + tableItemsNumber + ")", context).is(":hidden")) {
       $(".show_items tr:hidden", context).show();
       $(this).addClass('active');
+      $(this).text('Свернуть');
     } else {
       $(".show_items tr:not(:lt(" + tableItemsNumber + "), context)", context).hide();
       $(this).removeClass('active');
+      $(this).text(buttonText);
     }
   });
 
