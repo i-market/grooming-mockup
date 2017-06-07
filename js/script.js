@@ -101,9 +101,21 @@ $(document).ready(function () {
     });
   });
   // галерея
-  $(".gellery_item").fancybox({
+  var fancyboxOptions = {
     openEffect: 'elastic',
     closeEffect: 'elastic'
+  };
+  $(".gellery_item").fancybox(fancyboxOptions);
+  $(".hotel_gallery").each(function(idx) {
+    $(this).find(".hotel_gallery_item")
+      .attr('rel', 'hotel-gallery-' + idx)
+      .fancybox($.extend({}, fancyboxOptions, {
+        beforeShow: function() {
+          if (this.group.length > 1) {
+            this.title = 'Фотография ' + (this.index + 1) + ' из ' + this.group.length;
+          }
+        }
+      }));
   });
   // прокрутка
   wow = new WOW({
