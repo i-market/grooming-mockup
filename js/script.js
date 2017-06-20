@@ -101,16 +101,14 @@ $(document).ready(function () {
     });
   });
   // галерея
-  var fancyboxOptions = {};
-  function initFancybox($scope) {
-    $scope.find('.gellery_item, [data-fancybox]').fancybox(fancyboxOptions);
-    $scope.find('.hotel_gallery').each(function(idx) {
-      $(this).find('.hotel_gallery_item')
-        .attr('data-fancybox', 'hotel-gallery-' + idx)
-        .fancybox(fancyboxOptions);
-    });
-  }
-  initFancybox($('body'));
+  $('.hotel_gallery').each(function(idx) {
+    $(this).find('.hotel_gallery_item')
+      .attr('data-fancybox', 'hotel-gallery-' + idx);
+  });
+  $().fancybox({
+    // present and future elements
+    selector: '.gellery_item, [data-fancybox]'
+  });
   // прокрутка
   wow = new WOW({
     mobile: false
