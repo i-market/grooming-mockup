@@ -101,22 +101,16 @@ $(document).ready(function () {
     });
   });
   // галерея
-  var fancyboxOptions = {
-    openEffect: 'elastic',
-    closeEffect: 'elastic'
-  };
-  $(".gellery_item").fancybox(fancyboxOptions);
-  $(".hotel_gallery").each(function(idx) {
-    $(this).find(".hotel_gallery_item")
-      .attr('rel', 'hotel-gallery-' + idx)
-      .fancybox($.extend({}, fancyboxOptions, {
-        beforeShow: function() {
-          if (this.group.length > 1) {
-            this.title = 'Фотография ' + (this.index + 1) + ' из ' + this.group.length;
-          }
-        }
-      }));
-  });
+  var fancyboxOptions = {};
+  function initFancybox($scope) {
+    $scope.find('.gellery_item, [data-fancybox]').fancybox(fancyboxOptions);
+    $scope.find('.hotel_gallery').each(function(idx) {
+      $(this).find('.hotel_gallery_item')
+        .attr('data-fancybox', 'hotel-gallery-' + idx)
+        .fancybox(fancyboxOptions);
+    });
+  }
+  initFancybox($('body'));
   // прокрутка
   wow = new WOW({
     mobile: false
@@ -137,22 +131,22 @@ $(document).ready(function () {
           slidesToShow: 3,
           slidesToScroll: 1,
         }
-            },
+      },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
         }
-            },
+      },
       {
         breakpoint: 580,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
         }
-            }
-        ]
+      }
+    ]
   });
   $('.slider_why_us').slick({
     arrows: false,
@@ -167,14 +161,14 @@ $(document).ready(function () {
           slidesToShow: 3,
           slidesToScroll: 3,
         }
-            },
+      },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
         }
-            },
+      },
       {
         breakpoint: 580,
         settings: {
