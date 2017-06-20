@@ -3288,6 +3288,12 @@ h3 {
   .col_2 {
     width: calc(50% - 20px);
   }
+  .hotel_gallery_item {
+    // show first 4 items
+    &:nth-child(n+4) {
+      display: none;
+    }
+  }
 }
 
 .wrap_tables {
