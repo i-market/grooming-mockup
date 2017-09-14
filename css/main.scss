@@ -515,6 +515,10 @@ h3 {
     }
   }
   .header_info {
+    // border radius is inconsistent with other inputs and buttons
+    $border-radius: 20px;
+    $padding: 20px;
+    $initial-width: 185px;
     margin-top: 20px;
     @media only screen and (max-width: 1680px) {
       float: right;
@@ -530,7 +534,12 @@ h3 {
       text-align: right;
     }
     .btn {
+      border-radius: $border-radius;
+      width: $initial-width;
+      padding-left: $padding;
+      padding-right: $padding;
       vertical-align: middle;
+      text-align: center;
       @media only screen and (max-width: 767px) {
         display: none;
       }
@@ -552,6 +561,26 @@ h3 {
       text-align: right;
       font-size: 0;
       margin-bottom: 20px;
+      @media only screen and (min-width: 1025px) {
+        // alt input style
+        flex-basis: 100%;
+        width: $initial-width;
+        height: 32px;
+        margin-left: auto;
+        margin-bottom: 15px;
+        padding-right: $padding;
+        box-shadow: 0 1px 4px 0 rgba(#000, 0.3) inset;
+        border-radius: $border-radius;
+        transition-property: width;
+        transition-duration: 0.2s;
+        &.focus {
+          width: 100%;
+          box-shadow: 0 0 0 1px rgba(#000, 0.5) inset;
+          button {
+            opacity: 0.5;
+          }
+        }
+      }
       @media only screen and (max-width: 1024px) {
         display: none;
         position: absolute;
@@ -563,10 +592,20 @@ h3 {
         vertical-align: middle;
         width: calc(100% - 18px);
         font-size: 20px;
-        //height: 20px;
-        line-height: 20px;
+        // `normal` instead of 1 for safari, see https://stackoverflow.com/a/22657686
+        line-height: normal;
         text-align: right;
-        padding: 0 12px;
+        padding: 0 ($padding / 2) 0 $padding;
+        @media only screen and (min-width: 1025px) {
+          // alt input style
+          text-align: left;
+          font-size: 18px;
+          height: 100%;
+          background: transparent;
+          &::placeholder {
+            color: #424242;
+          }
+        }
         @media only screen and (max-width: 1024px) {
           border: 1px solid $border;
           text-align: left;
@@ -581,6 +620,11 @@ h3 {
         width: 18px;
         height: 20px;
         background: url('../images/icon_search.png')no-repeat center center;
+        @media only screen and (min-width: 1025px) {
+          // alt input style
+          background-image: url('../images/icon_search_black.png');
+          opacity: 0.2;
+        }
         @media only screen and (max-width: 1024px) {
           display: none;
         }
