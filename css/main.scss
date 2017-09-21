@@ -520,6 +520,16 @@ h3 {
     $padding: 20px;
     $initial-width: 185px;
     margin-top: 20px;
+    @media only screen and (min-width: 1025px) {
+      // alt input style
+      display: flex;
+      flex-wrap: wrap;
+      // TODO hack
+      max-width: $initial-width * 3;
+      & > * {
+        flex-basis: 50%;
+      }
+    }
     @media only screen and (max-width: 1680px) {
       float: right;
     }
@@ -563,18 +573,13 @@ h3 {
       margin-bottom: 20px;
       @media only screen and (min-width: 1025px) {
         // alt input style
-        flex-basis: 100%;
-        width: $initial-width;
         height: 32px;
-        margin-left: auto;
-        margin-bottom: 15px;
+        // TODO hack
+        margin-bottom: -10px;
         padding-right: $padding;
         box-shadow: 0 1px 4px 0 rgba(#000, 0.3) inset;
         border-radius: $border-radius;
-        transition-property: width;
-        transition-duration: 0.2s;
         &.focus {
-          width: 100%;
           box-shadow: 0 0 0 1px rgba(#000, 0.5) inset;
           button {
             opacity: 0.5;
@@ -645,6 +650,24 @@ h3 {
       }
       @media only screen and (max-width:767px) {
         display: none;
+      }
+    }
+    .tel_group {
+      display: inline-block;
+      &:not(:first-of-type) {
+        @media only screen and (max-width: 1024px) {
+          display: none;
+        }
+      }
+      @media only screen and (min-width: 1025px) {
+        // alt input style
+        &:first-of-type {
+          order: -1;
+        }
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
       }
     }
     .tel_mobile {
